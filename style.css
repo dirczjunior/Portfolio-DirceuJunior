@@ -60,8 +60,8 @@ a {
 .menuNavegacao {
     list-style-type: none;
     display: flex;
-    flex-direction: row; /* Alinha os itens em uma linha */
-    justify-content: flex-end; /* Alinha os itens à direita */
+    flex-direction: row; 
+    justify-content: flex-end; 
     align-items: center;
     position: fixed;
     top: 0;
@@ -71,12 +71,10 @@ a {
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 /* Estilo para os itens da lista */
 .menuNavegacao li {
-    margin: 0 10px; /* Espaçamento entre os itens */
+    margin: 0 10px; 
 }
-
 /* Estilo para os links do menu */
 .menuNavegacao a {
     color: var(--turquesa-200);
@@ -85,7 +83,7 @@ a {
     0 0 1px #00ffff,
     0 0 2px #00ccff, 
     0 0 8px #000000; 
-    font-size: 1.2rem; /* Tamanho do texto menor */
+    font-size: 1.2rem;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -101,27 +99,99 @@ a {
 
 /* Estilo para a logo */
 .menuNavegacao .logo {
-    margin-right: auto; /* Empurra a logo para a esquerda */
-    padding: 0; /* Remove padding extra */
+    margin-right: auto;
+    padding: 0; 
 }
-
 .menuNavegacao .logo a {
-    padding: 0; /* Remove padding extra */
-    display: flex; /* Garante que a imagem seja exibida como um bloco */
-    align-items: center; /* Alinha verticalmente no centro */
+    padding: 0;
+    display: flex; 
+    align-items: center; 
 }
-
 .menuNavegacao .logo img {
-    display: block; /* Garante que a imagem seja exibida como um bloco */
-    width: 50px; /* Ajuste conforme necessário */
+    display: block; 
+    width: 50px; 
     height: auto;
-    transition: none; /* Remove transições e efeitos */
+    transition: none; 
+}
+.menuNavegacao .logo a:hover {
+    background-color: transparent;
+    transform: none;
+}
+/* Menu Hamburguer */
+.menuHamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 100px;
+    margin-left: 100px;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+.menuHamburguer span {
+    height: 4px;
+    width: 30px;
+    background: var(--turquesa-200);
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.menuHamburguer .active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menuHamburguer.active span:nth-child(2) {
+    opacity: 0;
+}
+.menuHamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .menuNavegacao {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
+
+    .menuNavegacao li {
+        margin: 10px 0;
+    }
+
+    .menuHamburguer {
+        display: flex;
+    }
+
+    .menuNavegacao.active {
+        display: flex;
+    }
 }
 
-/* Remove o efeito hover da logo */
-.menuNavegacao .logo a:hover {
-    background-color: transparent; /* Remove o fundo de hover */
-    transform: none; /* Remove a transformação */
+@media (max-width: 360px) {
+    .sectionBox .divImgSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionBox .imgSection {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .textSection {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .projetosCartao {
+        width: 100%;
+    }
 }
 .divSection {
     padding: 0.1%;
@@ -169,6 +239,24 @@ a {
 }
 .textSection {
     max-width: 60%;
+}
+.contactContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.directContactHome {
+    display: flex;
+    gap: 10px;
+}
+
+.contactContainer span {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: var(--turquesa-200);
+    text-shadow: 0 0 0.5px #00ffff, 0 0 1px #00ffff, 0 0 2px #00ccff, 0 0 8px #000000;
 }
 .accordion {
     display:flex;
