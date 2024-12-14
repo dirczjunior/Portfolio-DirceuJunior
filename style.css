@@ -173,7 +173,7 @@ a {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .sectionBox .divImgSection {
         flex-direction: column;
         align-items: center;
@@ -229,16 +229,51 @@ a {
 .divImgSection {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 5px;
 }
 .imgSection {
-    margin-right: 10px;
-    border-radius: 10pc;
+    max-width: 40%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
     border: 3px solid var(--turquesa-200);
     box-shadow: 0 0 10px var(--turquesa-200), 0 0 20px var(--turquesa-300), 0 0 30px var(--turquesa-600);
 }
 .textSection {
-    max-width: 60%;
+    max-width: 50%
+}
+
+@media (max-width: 768px) {
+    .divImgSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .imgSection {
+        max-width: 50%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .textSection {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgSection {
+        max-width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .textSection {
+        max-width: 95%;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
 }
 .contactContainer {
     display: flex;
@@ -311,8 +346,9 @@ a {
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
-  }
-  .projetosCartao {
+}
+
+.projetosCartao {
     background-color: #2F4F4F;
     border: 2px solid var(--turquesa-200);
     border-radius: 10px;
@@ -322,16 +358,41 @@ a {
     width: 45%;
     text-align: center;
     padding: 10px;
-  }
-  .projetosCartao:hover {
+}
+
+.projetosCartao:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px fgba(0, 0, 0, 0.4);
-  }
- .projetosImg {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.projetosImg {
     width: 100%;
     height: auto;
     border-radius: 10px;
- }
+}
+
+@media (max-width: 768px) {
+    .projetosCartao {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .projetosCartao {
+        width: 90%;
+        margin: 0 auto; 
+    }
+
+    .projetosImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .projetos h3 {
+        font-size: 1.2rem;
+    }
+}
+
  /** Fim projetos **/
 
  .formulario {
@@ -444,4 +505,28 @@ a {
 
 .socialLinks img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .menuNavegacao {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .menuNavegacao {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 18px;
+    }
 }
