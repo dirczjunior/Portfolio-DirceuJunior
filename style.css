@@ -157,61 +157,6 @@ a {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .menuNavegacao {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.75); /* transparência elegante */
-        backdrop-filter: blur(4px); /* efeito fosco */
-        border-top: 2px solid var(--turquesa-200);
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.4s ease-in-out;
-        z-index: 999;
-    }
-
-    .menuNavegacao.active {
-        opacity: 1;
-        max-height: 300px; /* limite visível, pode ajustar se tiver mais links */
-    }
-
-    .menuNavegacao li {
-        margin: 10px 0;
-    }
-
-    .menuHamburguer {
-        display: flex;
-    }
-}
-
-@media (max-width: 480px) {
-    .sectionBox .divImgSection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sectionBox .imgSection {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .textSection {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .projetosCartao {
-        width: 100%;
-    }
-}
-
 .divSection {
     padding: 0.1%;
     margin-top: 2px;
@@ -241,7 +186,7 @@ a {
     margin: 0 8px;
     margin-bottom: auto;
 }
-.sectionBox . sectionTitle {
+.sectionBox .sectionTitle {
     margin:0;
     font-size: 1.8rem;
 }
@@ -472,4 +417,79 @@ a {
 
 .socialLinks img:hover {
     transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menuNavegacao {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.75); /* transparência elegante */
+        backdrop-filter: blur(4px); /* efeito fosco */
+        border-top: 2px solid var(--turquesa-200);
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .menuNavegacao.active {
+        opacity: 1;
+        max-height: 300px; /* limite visível, pode ajustar se tiver mais links */
+    }
+
+    .menuNavegacao li {
+        margin: 10px 0;
+    }
+
+    .menuHamburguer {
+        display: flex;
+    }
+
+     .accordion-button {
+        width: 90%;
+    }
+
+    .accordion-body {
+        width: 85.5%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .sectionBox .divImgSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionBox .imgSection {
+        width: 54%;
+        margin-bottom: 20px;
+    }
+
+    .textSection {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .projetosCartao {
+        width: 90%;
+    }
+
+    .accordion-button {
+        width: 90%;
+    }
+
+    .accordion-body {
+        width: 80.7%;
+    }
+    
 }
