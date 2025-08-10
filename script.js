@@ -34,3 +34,50 @@ document.addEventListener('DOMContentLoaded', function() {
         menuHamburguer.classList.toggle('active');
     });
 });
+
+    // Script do carrossel
+document.addEventListener('DOMContentLoaded', function () {
+  const carrossel = document.querySelector('.carrosselProjetos');
+  const btnPrev = document.querySelector('.btnCarrossel.prev');
+  const btnNext = document.querySelector('.btnCarrossel.next');
+
+  if (carrossel && btnPrev && btnNext) {
+    const scrollAmount = carrossel.clientWidth * 0.8;
+
+    btnNext.addEventListener('click', () => {
+      carrossel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    btnPrev.addEventListener('click', () => {
+      carrossel.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    // autoplay
+    let direction = 1;
+
+    setInterval(() => {
+      if (direction === 1 && carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth - 5) {
+        direction = -1;
+      } else if (direction === -1 && carrossel.scrollLeft <= 5) {
+        direction = 1;
+      }
+
+      carrossel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }, 15000);
+  }
+});
+
+// Script do footer
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelector('.toTop')?.addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+);

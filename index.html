@@ -2,7 +2,7 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="DirczJunior">
         <meta name="description" content="Portfólio de Dirceu Junior">
         <meta name="keywords" content="HTML, CSS, Dirceu Junior, gestão de TI, Grupo Pegoraro, CPD">
@@ -59,9 +59,9 @@
             <div id="sobre" class="divSection"></div>
             <section class="sectionBox">
                 <div class="imgTitle">
-                  <img src="img/complemento.png" width="34" heigth="34" alt="Ícone">
+                  <img src="img/complemento.png" width="34" height="34" alt="Ícone">
                     <h2 class="sectionTitle">Sobre</h2>
-                  <img src="img/complemento.png" width="34" heigth="34" alt="Ícone">
+                  <img src="img/complemento.png" width="34" height="34" alt="Ícone">
                 </div>
                 <div class="accordion">
                 <button class="accordion-button"><b>Resumo Profissional</b></button>
@@ -79,7 +79,7 @@
                  </div>
                 <button class="accordion-button"><b>Hobbies e mais...</b></button>
                   <div class="accordion-body">
-                    <p style="color:	#c2c2c2">Explorar novas tecnologias, como o uso da inteligência artificial. Curtir a natureza também faz parte da minha essência, como fazer trilhas.</p>
+                    <p style="color:	#c2c2c2">Explorar novas tecnologias, como o uso da inteligência artificial. Curtir a natureza também faz parte da minha essência, como fazer trilhas, camping e muito mais.</p>
                  </div>
                  </div>
              </section>
@@ -90,16 +90,26 @@
                     <h2 class="sectionTitle">Projetos</h2>
                  <img src="img/complemento.png" width="34" heigth="34" alt="Ícone">
                 </div>
-                <div class="projetos">
-                  <div class="projetosCartao">
-                    <img src="img/Portfolio.png" class="projetosImg" alt="Imagem do Portifolio">
-                    <h3>Meu Portfólio</h3>
-                  </div>
-                      <div class="projetosCartao">
-                        <img src="img/projeto-aula.png" class="projetosImg" alt="Imagem do projeto da Aula">
-                        <h3>Projeto Desenvolvido em Aula</h3>
-                      </div>
-                  </div>
+                <div class="carrosselContainer">
+  <button class="btnCarrossel prev">&#9664;</button>
+
+  <div class="carrosselProjetos">
+    <div class="projetosCartao">
+      <img src="img/Portfolio.png" class="projetosImg" alt="Portfólio">
+      <h3>Meu Portfólio</h3>
+    </div>
+    <div class="projetosCartao">
+      <img src="img/projeto-aula.png" class="projetosImg" alt="Projeto Aula">
+      <h3>Projeto em Aula</h3>
+    </div>
+    <div class="projetosCartao">
+      <img src="img/projeto-trabalho.png" class="projetosImg" alt="Projeto no Trabalho">
+      <h3>Sistema Interno - chamados de TI</h3>
+    </div>
+  </div>
+
+  <button class="btnCarrossel next">&#9654;</button>
+</div>
             </section>
             <div id="contato" class="divSection"></div>
             <section class="sectionBox">
@@ -120,29 +130,41 @@
             </section>
         </main>
         <footer class="footer">
-          <div class="footerLeft">
-              <img src="img/DirczJunior_logo_no_bg.png" alt="Logo DirczJunior" class="footerLogo">
-              <div class="footer-complement">
-                  <img src="img/complemento.png" alt="Complemento" class="footerComplement-img">
-                  <img src="img/complemento.png" alt="Complemento" class="footerComplement-img">
-              </div>
-          </div>
-          <div class="footerRight">
-              <h3>Redes:</h3>
-              <div class="directContact">
-                  <a href="https://wa.me/5549999339243" target="_blank" class="contactIcon">
-                      <img src="img/icons8-whatsapp.svg" alt="WhatsApp">
-                  </a>
-                  <a href="https://www.instagram.com/DirczJunior" target="_blank" class="contactIcon">
-                      <img src="img/icons8-instagram.svg" alt="Instagram">
-                  </a>
-              </div>
-              <div class="socialLinks">
-                  <a href="https://www.linkedin.com/in/dirceu-junior-54521b323/" target="_blank" class="contactIcon"><img src="img/icons8-linkedin.svg" alt="LinkedIn"></a>
-                  <a href="https://github.com/dirczjunior" target="_blank" class="contactIcon"><img src="img/icons8-github.svg" alt="GitHub"></a>
-              </div>
-          </div>
-      </footer>
+  <div class="footer__container">
+    <div class="footer__brand">
+      <img src="img/DirczJunior_logo_no_bg.png" alt="Logo DirczJunior">
+      <p>Transformando ideias em soluções digitais.</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Links rápidos">
+      <h4>Mapa</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__cta">
+      <h4>Vamos conversar?</h4>
+      <div class="footer__buttons">
+        <a class="btn btn--whats" href="https://wa.me/5549999339243" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+        <a class="btn btn--ghost" href="mailto:dirceu_junior37@hotmail.com">E-mail</a>
+      </div>
+      <div class="footer__social" aria-label="Redes sociais">
+        <a href="https://www.instagram.com/DirczJunior" target="_blank" aria-label="Instagram"><img src="img/icons8-instagram.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/dirceu-junior-54521b323/" target="_blank" aria-label="LinkedIn"><img src="img/icons8-linkedin.svg" alt=""></a>
+        <a href="https://github.com/dirczjunior" target="_blank" aria-label="GitHub"><img src="img/icons8-github.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <button class="toTop" aria-label="Voltar ao topo">↑</button>
+    <span>© <span id="year"></span> Dirceu Junior. Feito em HTML • CSS • JS</span>
+  </div>
+</footer>
         <script src="script.js"></script>
     </body>
 </html>
