@@ -636,6 +636,7 @@ a {
     .sectionBox .imgSection {
         width: 54%;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .textSection {
